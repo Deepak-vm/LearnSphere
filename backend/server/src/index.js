@@ -12,6 +12,7 @@ const authRoutes = require(path.join(__dirname, 'routes/auth'));
 const batchRoutes = require(path.join(__dirname, 'routes/batch'));
 const courseRoutes = require(path.join(__dirname, 'routes/course'));
 
+
 app.use('/api/auth', authRoutes);
 app.use('/api/batches', batchRoutes);
 app.use('/api/courses', courseRoutes);
