@@ -12,7 +12,7 @@ const login = async (req, res) => {
               CASE 
                 WHEN a.admin_id IS NOT NULL THEN json_build_object('admin_id', a.admin_id, 'department', a.department)
                 WHEN t.teacher_id IS NOT NULL THEN json_build_object('teacher_id', t.teacher_id, 'employment_status', t.employment_status)
-                WHEN s.student_id IS NOT NULL THEN json_build_object('student_id', s.student_id, 'registration_number', s.registration_number, 'current_semester', s.current_semester)
+                WHEN s.user_id IS NOT NULL THEN json_build_object('student_id', s.user_id, 'name', s.name, 'email', s.email, 'roll_no', s.roll_no, 'course', s.course)
               END as type_details
        FROM users u
        LEFT JOIN admins a ON u.user_id = a.user_id
