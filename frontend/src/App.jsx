@@ -1,24 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Signup from './components/Signup/Signup'
-import Login from './components/Login/Login'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import LoginPage from "./pages/Login";
+import Dashboard from "./features/student/pages/Dashboard";
+import HomePage from "./features/student/pages/HomePage";
+import TeacherDashboard from "../src/features/teacher/pages/TeacherDashboard";
+import AdminDashboard from "./features/admin/pages/AdminDashboard";
+import ProfileSelectionPage from './pages/ProfileSelectionPage';
+import FeePayment from './features/student/pages/FeePage';
 
-
-function App() {
- const myRouter = createBrowserRouter([
-  {path:'' , Component:Signup},
-  {path:'login' , Component:Login} ,
-  // {path:'dashboard' , Component : Dashboard} , 
-  {path:'Signup' , Component :Signup}
- ])
-
+export default function App() {
   return (
-    <>
-      <RouterProvider router={myRouter}/>
-    </>
-  )
+    <Router>
+      <Routes>
+        {/* Home/Profile Selection */}
+        <Route path="/" element={<ProfileSelectionPage />} />
+        
+        {/* Login Routes */}
+        <Route path="/login" element={<LoginPage />} />
+        
+        {/* Student Dashboard Routes */}
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route index element={<HomePage />} />
+          <Route path="fees" element={<FeePayment />} />
+          
+          {/* Add additional student routes here */}
+        </Route>
+        
+        {/* Teacher and Admin Routes */}
+        <Route path="/teacher/dashboard" element={<TeacherDashboard />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        
+        {/* Fallback route */}
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Router>
+  );
 }
-export default App
