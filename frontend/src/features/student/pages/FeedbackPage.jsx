@@ -28,7 +28,7 @@ const courses = [
     name: "Database Management",
     instructors: [
       { id: "i3", name: "Dr. Taruna Sunil" },
-      { id: "i4", name: "Prof. Ajay Kumar" }
+      { id: "i4", name: "RD Sharma" }
     ]
   },
   {
@@ -36,7 +36,7 @@ const courses = [
     name: "Data Science",
     instructors: [
       { id: "i5", name: "Dr. Arpan Gupta" },
-      { id: "i6", name: "Dr. Meera Sharma" }
+      { id: "i6", name: "HC Verma" }
     ]
   }
 ]

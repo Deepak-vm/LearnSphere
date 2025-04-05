@@ -1,5 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import {CourseRegistrationHeader, CourseRegistrationTable, CreditSummary} from "../courses/CourseRegistration"
+import {CourseRegistrationHeader, CourseRegistrationTable, CreditSummary} from "../components/courses/CourseRegistration"
 
 const CourseRegistration = () => {  
     return (
