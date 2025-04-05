@@ -18,7 +18,7 @@ const CalendarDialog=()=> {
       <DialogHeader>
         <DialogTitle>Academic Calendar - Even Semester 2024-25</DialogTitle>
       </DialogHeader>
-      <div className="relative w-full aspect-[1.5]">
+      <div className="relative w-full aspect-[2.1]">
         <img
           src={AcademicCalender}
           alt="Academic Calendar"
