@@ -1,7 +1,7 @@
 import { AttendanceOverview } from "../components/attendance/AttendanceOverview"
 import { CourseSlider } from "../components/courses/CourseSlider"
-import  TodaySchedule  from "../components/timeline/TodaySchedule"
-// import { EventsHolidays } from "../components/dashboard/EventsHolidays"
+import  TodaySchedule  from "../components/others/TodaySchedule"
+// import { EventsHolidays } from "../components/others/EventsHolidays"
 // import { Notifications } from "../components/dashboard/Notifications"
 
 export default function DashboardPage() {
