@@ -21,8 +21,8 @@ export function MainNav() {
       path: "/dashboard/attendance",
     },
     {
-      name: "Profile",
-      path: "/dashboard/profile",
+      name: "Feedback",
+      path: "/dashboard/feedback",
     },
   ];
 
