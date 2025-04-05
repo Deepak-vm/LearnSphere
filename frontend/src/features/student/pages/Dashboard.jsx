@@ -4,6 +4,7 @@ import logo from "../../../assets/images/learnsphere-logo.png";
 import {MainNav} from '../components/dashboard/MainNav';
 import { ThemeToggle } from "../../../components/ui/ThemeToggle";
 
+
 export default function Dashboard() {
   return (
     <div className="min-h-screen flex flex-col bg-background">

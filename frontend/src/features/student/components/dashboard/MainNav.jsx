@@ -9,16 +9,16 @@ export function MainNav() {
       path: "/dashboard",
     },
     {
-      name: "Courses",
-      path: "/dashboard/courses",
+      name: "Course Registration",
+      path: "/dashboard/CourseRegistration",
+    },
+    {
+      name: "Fee Payment",
+      path: "/dashboard/FeePayment",
     },
     {
       name: "Attendance",
       path: "/dashboard/attendance",
-    },
-    {
-      name: "Fee Payment",
-      path: "/dashboard/fees",
     },
     {
       name: "Profile",

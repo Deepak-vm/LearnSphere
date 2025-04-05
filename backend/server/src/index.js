@@ -11,12 +11,13 @@ app.use(cors());
 const authRoutes = require(path.join(__dirname, 'routes/auth'));
 const batchRoutes = require(path.join(__dirname, 'routes/batch'));
 const courseRoutes = require(path.join(__dirname, 'routes/course'));
+const studentRoutes = require(path.join(__dirname, 'routes/student'));
 
 
 app.use('/api/auth', authRoutes);
 app.use('/api/batches', batchRoutes);
 app.use('/api/courses', courseRoutes);
-
+app.use('/api/students' , studentRoutes);
 
 
 // app start

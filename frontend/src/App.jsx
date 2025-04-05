@@ -6,6 +6,7 @@ import TeacherDashboard from "../src/features/teacher/pages/TeacherDashboard";
 import AdminDashboard from "./features/admin/pages/AdminDashboard";
 import ProfileSelectionPage from './pages/ProfileSelectionPage';
 import FeePayment from './features/student/pages/FeePage';
+import CourseRegistration from './features/student/pages/CourseRegistrationPage';
 
 export default function App() {
   return (
@@ -20,7 +21,8 @@ export default function App() {
         {/* Student Dashboard Routes */}
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<HomePage />} />
-          <Route path="fees" element={<FeePayment />} />
+          <Route path="FeePayment" element={<FeePayment />} />
+          <Route path="CourseRegistration" element={<CourseRegistration />} />
           
           {/* Add additional student routes here */}
         </Route>
