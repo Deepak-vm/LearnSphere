@@ -17,8 +17,8 @@ export function MainNav() {
       path: "/dashboard/FeePayment",
     },
     {
-      name: "Attendance",
-      path: "/dashboard/attendance",
+      name: "Exam Results",
+      path: "/dashboard/ExamResults",
     },
     {
       name: "Feedback",

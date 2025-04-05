@@ -8,6 +8,7 @@ import ProfileSelectionPage from './pages/ProfileSelectionPage';
 import FeePayment from './features/student/pages/FeePage';
 import CourseRegistration from './features/student/pages/CourseRegistrationPage';
 import FeedbackPage from "./features/student/pages/FeedbackPage";
+import ExamResultsPage from "./features/student/pages/ExamResultsPages"; 
 
 export default function App() {
   return (
@@ -25,8 +26,7 @@ export default function App() {
           <Route path="FeePayment" element={<FeePayment />} />
           <Route path="CourseRegistration" element={<CourseRegistration />} />
           <Route path="feedback" element={<FeedbackPage />} />
-          
-          {/* Add additional student routes here */}
+          <Route path="ExamResults" element={<ExamResultsPage />} />
         </Route>
         
         {/* Teacher and Admin Routes */}
