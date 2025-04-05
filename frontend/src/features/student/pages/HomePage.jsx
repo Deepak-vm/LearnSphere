@@ -1,7 +1,7 @@
 import { AttendanceOverview } from "../components/attendance/AttendanceOverview"
 import { CourseSlider } from "../components/courses/CourseSlider"
 import  TodaySchedule  from "../components/others/TodaySchedule"
-// import { EventsHolidays } from "../components/others/EventsHolidays"
+import { EventsHolidays } from "../components/others/EventHolidays"
 // import { Notifications } from "../components/dashboard/Notifications"
 
 export default function DashboardPage() {
@@ -17,7 +17,7 @@ export default function DashboardPage() {
         <TodaySchedule />
       </div>
       <div className="lg:col-span-1">
-        {/* <EventsHolidays /> */}
+        <EventsHolidays />
       </div>
       <div className="lg:col-span-1">
         {/* <Notifications /> */}
