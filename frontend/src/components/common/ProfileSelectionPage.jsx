@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import logo from "../assets/images/learnsphere-logo.png";
+import logo from "@/assets/images/learnsphere-logo.png";
 
 export default function ProfileSelectionPage() {
   const navigate = useNavigate();

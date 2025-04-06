@@ -1,7 +1,7 @@
 import { useSearchParams, useNavigate, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import LoginForm from '../components/common/LoginForm';
-import logo from "../assets/images/learnsphere-logo.png";
+import LoginForm from './LoginForm';
+import logo from "@/assets/images/learnsphere-logo.png";
 
 export default function LoginPage() {
   const [searchParams] = useSearchParams();

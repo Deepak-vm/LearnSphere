@@ -33,7 +33,7 @@ const courses = [
     credits: 4,
     type: "Core",
     image: s1,      
-    faculty: "Prof. Devendra Bhavsar",
+    faculty: "Prof. Amit Sinhal",
     prerequisites: ["Programming Basics", "Discrete Mathematics"],
   },
   {
@@ -182,7 +182,7 @@ export function CourseSlider() {
                         </DialogContent>
                       </Dialog>
                       <Button variant="default" className="w-full" asChild>
-                        <Link to={`/courses/${course.id}`}>
+                        <Link to={`courses/${course.id}`}>
                           Open Course
                           <ChevronRight className="ml-2 h-4 w-4" />
                         </Link>
