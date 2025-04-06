@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { UserCircle } from "lucide-react";
+import {ProfileSidebar} from "../components/profile/Dropdown";
 import logo from "../../../assets/images/learnsphere-logo.png";
 import {MainNav} from '../components/dashboard/MainNav';
 import { ThemeToggle } from "../../../components/ui/ThemeToggle";
@@ -34,7 +34,7 @@ export default function Dashboard() {
               Library
             </a>
             <ThemeToggle />
-            <UserCircle className="h-8 w-8 text-gray-600" />
+            <ProfileSidebar/>
             <div className="lg:hidden">
               <MainNav />
             </div>

@@ -9,6 +9,7 @@ import FeePayment from './features/student/pages/FeePage';
 import CourseRegistration from './features/student/pages/CourseRegistrationPage';
 import FeedbackPage from "./features/student/pages/FeedbackPage";
 import ExamResultsPage from "./features/student/pages/ExamResultsPages"; 
+import ProfilePage from "./features/student/pages/ProfilePage";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="CourseRegistration" element={<CourseRegistration />} />
           <Route path="feedback" element={<FeedbackPage />} />
           <Route path="ExamResults" element={<ExamResultsPage />} />
+          <Route path="profile" element={<ProfilePage />} />
         </Route>
         
         {/* Teacher and Admin Routes */}
