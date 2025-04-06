@@ -18,12 +18,12 @@ const CalendarDialog=()=> {
       <DialogHeader>
         <DialogTitle>Academic Calendar - Even Semester 2024-25</DialogTitle>
       </DialogHeader>
-      <div className="relative w-full aspect-[2.1]">
+      <div className="relative w-full aspect-[1.8]">
         <img
           src={AcademicCalender}
           alt="Academic Calendar"
           fill
-          className="object-contain"
+          className="object-contain w-full h-full"
           priority
         />
       </div>

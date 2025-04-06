@@ -1,6 +1,6 @@
 "use client"
 
-import { NavLink, useLocation } from "react-router-dom"
+import { NavLink }from "react-router-dom"
 import { Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
@@ -17,8 +17,6 @@ const navItems = [
 ];
 
 export function MainNav() {
-  const location = useLocation();
-  const pathname = location.pathname;
 
   return (
     <>
