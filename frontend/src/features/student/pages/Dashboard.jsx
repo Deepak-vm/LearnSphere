@@ -10,7 +10,7 @@ export default function Dashboard() {
     <div className="min-h-screen flex flex-col bg-background">
       <header className="border-b bg-card">
         <div className="container mx-auto flex h-16 items-center px-10">
-          <Link to="/dashboard" className="flex items-center space-x-2">
+          <Link to="/student/dashboard" className="flex items-center space-x-2">
             <img
               src={logo}
               alt="LearnSphere Logo"

@@ -28,7 +28,7 @@ export default function LoginForm({ userType }) {
           navigate("/teacher/dashboard");
           break;
         default:
-          navigate("/dashboard");
+          navigate("/student/dashboard");
       }
     } else {
       setError("Invalid email or password");
