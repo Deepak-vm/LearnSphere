@@ -3,7 +3,7 @@ import {CourseRegistrationHeader, CourseRegistrationTable, CreditSummary} from "
 
 const CourseRegistration = () => {  
     return (
-        <div className="container py-6 space-y-6">
+        <div className="container p-6 space-y-6">
           <CourseRegistrationHeader />
           <div className="grid gap-6 md:grid-cols-[2fr_1fr]">
             <div className="space-y-6">
