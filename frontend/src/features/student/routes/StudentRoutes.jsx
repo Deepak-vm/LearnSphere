@@ -1,5 +1,5 @@
 import { Route } from "react-router-dom";
-import Dashboard from "../pages/Dashboard";
+import Dashboard from "../pages/HomePageHeader";
 import HomePage from "../pages/HomePage";
 import FeePayment from "../pages/FeePage";
 import CourseRegistration from "../pages/CourseRegistrationPage";

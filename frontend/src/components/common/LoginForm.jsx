@@ -10,16 +10,29 @@ export default function LoginForm({ userType }) {
   const navigate = useNavigate();
 
   const validCredentials = {
-    student: { email: "student@learnsphere.edu", password: "student123" },
-    teacher: { email: "teacher@learnsphere.edu", password: "teacher123" },
-    admin: { email: "admin@learnsphere.edu", password: "admin123" }
+    student: [
+      { email: "riyansh@learnsphere.edu", password: "student123" },
+      { email: "deepak@learnsphere.edu", password: "student123" },
+      { email: "nikhil@learnsphere.edu", password: "student123" }
+    ],
+    teacher: [
+      { email: "AmitSinhal@learnsphere.edu", password: "teacher123" },
+    ],
+    admin: [
+      { email: "admin@learnsphere.edu", password: "admin123" }
+    ]
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     
-    if (email === validCredentials[userType]?.email && password === validCredentials[userType]?.password) {
+    // Find matching user in the appropriate array
+    const foundUser = validCredentials[userType]?.find(
+      user => user.email === email && user.password === password
+    );
+    
+    if (foundUser) {
       switch(userType) {
         case "admin":
           navigate("/admin/dashboard");

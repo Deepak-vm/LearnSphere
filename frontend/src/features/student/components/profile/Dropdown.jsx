@@ -52,19 +52,19 @@ export function ProfileSidebar() {
 
         {/* Menu Items */}
         <DropdownMenuItem asChild>
-          <Link to="/dashboard/profile" className="flex items-center gap-2">
+          <Link to="/student/dashboard/profile" className="flex items-center gap-2">
             <UserCircle className="h-4 w-4" />
             View Profile
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link to="/dashboard/devices" className="flex items-center gap-2">
+          <Link to="/student/dashboard/devices" className="flex items-center gap-2">
             <Laptop className="h-4 w-4" />
             Logged in Devices
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Link to="/dashboard/change-password" className="flex items-center gap-2">
+          <Link to="/student/dashboard/ChangePassword" className="flex items-center gap-2">
             <Lock className="h-4 w-4" />
             Change Password
           </Link>

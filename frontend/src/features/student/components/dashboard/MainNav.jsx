@@ -9,11 +9,11 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { CalendarDialog } from "../others/EventHolidays"
 
 const navItems = [
-  { name: "Home", path: "/dashboard" },
-  { name: "Course Registration", path: "/dashboard/CourseRegistration" },
-  { name: "Fee Payment", path: "/dashboard/FeePayment" },
-  { name: "Exam Results", path: "/dashboard/ExamResults" },
-  { name: "Feedback", path: "/dashboard/feedback" },
+  { name: "Home", path: "/student/dashboard" },
+  { name: "Course Registration", path: "/student/dashboard/CourseRegistration" },
+  { name: "Fee Payment", path: "/student/dashboard/FeePayment" },
+  { name: "Exam Results", path: "/student/dashboard/ExamResults" },
+  { name: "Feedback", path: "/student/dashboard/feedback" },
 ];
 
 export function MainNav() {
