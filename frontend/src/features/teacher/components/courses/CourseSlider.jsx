@@ -15,6 +15,7 @@ import  s1  from "@/assets/images/s1.jpeg";
 import  s2 from "@/assets/images/s2.jpeg";
 import  s3 from "@/assets/images/s3.jpeg";
 import  s4 from "@/assets/images/s4.png";
+import cd from "@/assets/Docs/courseDescription.pdf";
 export function CourseSlider() {
   const courses = [
     {
@@ -25,6 +26,7 @@ export function CourseSlider() {
       credits: 4,
       type: "Core",
       image: s1,
+      courseDescription: cd
     },
     {
       id: "CS301",
@@ -34,6 +36,7 @@ export function CourseSlider() {
       credits: 4,
       type: "Core",
       image: s2,
+      courseDescription: cd
     },
     {
       id: "CS401",
@@ -43,6 +46,7 @@ export function CourseSlider() {
       credits: 4,
       type: "Core",
       image: s3,
+      courseDescription: cd
     },
     {
       id: "CS501",
@@ -52,6 +56,7 @@ export function CourseSlider() {
       credits: 3,
       type: "Department Elective",
       image: s4,
+      courseDescription: cd
     },
   ];
 
@@ -63,7 +68,7 @@ export function CourseSlider() {
           <p className="text-muted-foreground">Manage your active courses for this semester</p>
         </div>
         <Button asChild>
-          <Link href="/teacher/create-course">
+          <Link href="/teacher/CreateCourse">
             <span className="mr-2">+</span>
             Create Course
           </Link>
@@ -150,7 +155,16 @@ export function CourseSlider() {
                                   <ul className="text-sm text-muted-foreground space-y-1">
                                     <li>Type: {course.type}</li>
                                     <li>Credits: {course.credits}</li>
-                                    <li>Faculty: {course.faculty}</li>
+                                    <li>Code: {course.code}</li>
+                                    <a
+                                      href={course.courseDescription}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                    >
+                                      <Button variant="secondary" className="w-full">
+                                        View Course Description
+                                      </Button>
+                                    </a>
                                   </ul>
                                 </div>
                                 {course.prerequisites && (

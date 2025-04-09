@@ -17,25 +17,18 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Dialog,
   DialogContent,
-  DialogTrigger
+  DialogTrigger, 
+  DialogHeader, 
+  DialogTitle, 
 } from "@/components/ui/dialog";
 import {
   Sheet,
   SheetContent,
   SheetTrigger
 } from "@/components/ui/sheet";
+import  AcademicCalender from "@/assets/images/AcademicCalender.png";
 
-const CalendarDialog = () => {
-  return (
-    <div>
-      <h2 className="text-lg font-semibold mb-4">Academic Calendar</h2>
-      {/* Calendar content goes here */}
-      <div className="p-4">
-        Calendar content will be displayed here
-      </div>
-    </div>
-  );
-};
+
 
 // --- Main Header Component ---
 const TeacherHeader = () => {
@@ -238,4 +231,23 @@ const ProfileDropdown = () => {
   );
 };
 
-export { TeacherHeader, NotificationDropdown, ProfileDropdown };
+const CalendarDialog=()=> {
+  return (
+    <DialogContent className="max-w-7xl">
+      <DialogHeader>
+        <DialogTitle>Academic Calendar - Even Semester 2024-25</DialogTitle>
+      </DialogHeader>
+      <div className="relative w-full aspect-[1.8]">
+        <img
+          src={AcademicCalender}
+          alt="Academic Calendar"
+          fill
+          className="object-contain w-full h-full"
+          priority
+        />
+      </div>
+    </DialogContent>
+  )
+}
+
+export { TeacherHeader, NotificationDropdown, ProfileDropdown , CalendarDialog };
