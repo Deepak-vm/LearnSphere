@@ -67,6 +67,19 @@ const TeacherHeader = () => {
             <CalendarDialog />
           </DialogContent>
         </Dialog>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button
+              variant="link"
+              className={cn("text-sm font-medium transition-colors hover:text-primary p-0", "text-muted-foreground")}
+            >
+              Time Table
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <TimeTable />
+          </DialogContent>
+        </Dialog>
       </nav>
 
       {/* Mobile Navigation */}
@@ -107,6 +120,24 @@ const TeacherHeader = () => {
                 <CalendarDialog />
               </DialogContent>
             </Dialog>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button
+                  variant="ghost"
+                  className={cn(
+                    "text-sm font-medium transition-colors hover:text-primary justify-start p-2 h-auto w-full text-left",
+                    "text-muted-foreground",
+                  )}
+                >
+                  Time Table
+                </Button>
+              </DialogTrigger>
+              <DialogContent>
+                <TimeTable />
+              </DialogContent>
+            </Dialog>
+            
+
           </nav>
         </SheetContent>
       </Sheet>
@@ -236,6 +267,24 @@ const CalendarDialog=()=> {
     <DialogContent className="max-w-7xl">
       <DialogHeader>
         <DialogTitle>Academic Calendar - Even Semester 2024-25</DialogTitle>
+      </DialogHeader>
+      <div className="relative w-full aspect-[1.8]">
+        <img
+          src={AcademicCalender}
+          alt="Academic Calendar"
+          fill
+          className="object-contain w-full h-full"
+          priority
+        />
+      </div>
+    </DialogContent>
+  )
+}
+const TimeTable=()=> {
+  return (
+    <DialogContent className="max-w-7xl">
+      <DialogHeader>
+        <DialogTitle>Time Table - Even Semester 2024-25</DialogTitle>
       </DialogHeader>
       <div className="relative w-full aspect-[1.8]">
         <img
