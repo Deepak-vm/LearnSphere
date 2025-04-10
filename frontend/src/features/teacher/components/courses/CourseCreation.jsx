@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
 
 import { Button } from "@/components/ui/button"
@@ -115,7 +115,7 @@ export function CourseCreation() {
 
     // Redirect after a short delay to simulate processing
     setTimeout(() => {
-      navigate("/teacher/dashboard")  
+      navigate("/teacher/dashboard")
     }, 2000)
   }
 
