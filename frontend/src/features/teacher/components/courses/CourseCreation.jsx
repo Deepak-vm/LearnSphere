@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react"
 import { useNavigate, Link } from "react-router-dom"
-// Replace these imports with the correct paths to your UI components
-import { Button } from "../../../../components/ui/button"
-import { Input } from "../../../../components/ui/input"
-import { Textarea } from "../../../../components/ui/textarea"
-import { Card, CardContent, CardHeader, CardTitle } from "../../../../components/ui/card"
+
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Plus, Trash2, ArrowLeft } from "lucide-react"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../../../../components/ui/table"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 
 export function CourseCreation() {
   const navigate = useNavigate()
@@ -122,7 +122,7 @@ export function CourseCreation() {
   return (
     <div className="container max-w-4xl py-6">
       <div className="flex items-center mb-6">
-        <Link to="/teacher/courses" className="mr-4">
+        <Link to="/teacher/dashboard" className="mr-4">
           <Button variant="ghost" size="icon">
             <ArrowLeft className="h-5 w-5" />
           </Button>

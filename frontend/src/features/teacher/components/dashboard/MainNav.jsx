@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "../../../../lib/utils";
@@ -26,17 +26,22 @@ import {
   SheetContent,
   SheetTrigger
 } from "@/components/ui/sheet";
-import  AcademicCalender from "@/assets/images/AcademicCalender.png";
-
-
+import AcademicCalender from "@/assets/images/AcademicCalender.png";
 
 // --- Main Header Component ---
 const TeacherHeader = () => {
+  const navigate = useNavigate();
+  
   const navItems = [
-    { name: "Home", path: "/teacher/dashboard"},
-    { name: "Add Course", path: "/teacher/add-course" },
-    { name: "Applications", path: "/teacher/applications"},
+    { name: "Home", path: "/teacher/dashboard" },
+    { name: "Add Course", path: "/teacher/dashboard/createcourse" }, 
+    { name: "Applications", path: "/teacher/applications" },
   ];
+
+ 
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
 
   return (
     <>
@@ -136,8 +141,6 @@ const TeacherHeader = () => {
                 <TimeTable />
               </DialogContent>
             </Dialog>
-            
-
           </nav>
         </SheetContent>
       </Sheet>
@@ -204,6 +207,13 @@ const NotificationDropdown = () => {
 
 // --- Profile Dropdown Component ---
 const ProfileDropdown = () => {
+  const navigate = useNavigate();
+  
+  const handleLogout = () => {
+    // Add any logout logic here
+    navigate("/login");
+  };
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -213,7 +223,7 @@ const ProfileDropdown = () => {
               src={teacherImage}
               alt="Dr. Amit Sinhal"
             />
-            <AvatarFallback>AS</AvatarFallback> {/* Changed from SJ to AS for Dr. Amit Sinhal */}
+            <AvatarFallback>AS</AvatarFallback>
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
@@ -224,7 +234,7 @@ const ProfileDropdown = () => {
               src={teacherImage}
               alt="Dr. Amit Sinhal"
             />
-            <AvatarFallback>AS</AvatarFallback> {/* Changed from SJ to AS */}
+            <AvatarFallback>AS</AvatarFallback>
           </Avatar>
           <div>
             <p className="text-sm font-medium">Dr. Amit Sinhal</p>
@@ -251,18 +261,18 @@ const ProfileDropdown = () => {
           </Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator className="bg-zinc-800" />
-        <DropdownMenuItem>
-          <Link to="/login" className="flex items-center gap-2 w-full text-red-500">
+        <DropdownMenuItem onClick={handleLogout}>
+          <div className="flex items-center gap-2 w-full text-red-500">
             <LogOut className="h-4 w-4" />
             Logout
-          </Link>
+          </div>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
 };
 
-const CalendarDialog=()=> {
+const CalendarDialog = () => {
   return (
     <DialogContent className="max-w-7xl">
       <DialogHeader>
@@ -272,15 +282,14 @@ const CalendarDialog=()=> {
         <img
           src={AcademicCalender}
           alt="Academic Calendar"
-          fill
           className="object-contain w-full h-full"
-          priority
         />
       </div>
     </DialogContent>
-  )
-}
-const TimeTable=()=> {
+  );
+};
+
+const TimeTable = () => {
   return (
     <DialogContent className="max-w-7xl">
       <DialogHeader>
@@ -290,13 +299,11 @@ const TimeTable=()=> {
         <img
           src={AcademicCalender}
           alt="Academic Calendar"
-          fill
           className="object-contain w-full h-full"
-          priority
         />
       </div>
     </DialogContent>
-  )
-}
+  );
+};
 
-export { TeacherHeader, NotificationDropdown, ProfileDropdown , CalendarDialog };
+export { TeacherHeader, NotificationDropdown, ProfileDropdown, CalendarDialog };
