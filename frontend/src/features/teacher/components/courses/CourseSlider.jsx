@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight } from "lucide-react";
@@ -17,6 +17,7 @@ import  s3 from "@/assets/images/s3.jpeg";
 import  s4 from "@/assets/images/s4.png";
 import cd from "@/assets/Docs/courseDescription.pdf";
 export function CourseSlider() {
+  const navigate = useNavigate();
   const courses = [
     {
       id: "CS201",
@@ -67,11 +68,12 @@ export function CourseSlider() {
           <h1 className="text-3xl font-bold">My Courses</h1>
           <p className="text-muted-foreground">Manage your active courses for this semester</p>
         </div>
-        <Button asChild>
-          <Link href="/teacher/CreateCourse">
-            <span className="mr-2">+</span>
-            Create Course
-          </Link>
+        <Button onClick={() => {
+          console.log("Navigating to create course page");
+          navigate("/teacher/dashboard/createcourse");
+        }}>
+          <span className="mr-2">+</span>
+          Create Course
         </Button>
       </div>
       <div className="relative px-12">

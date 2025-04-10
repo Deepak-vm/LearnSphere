@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, Outlet } from "react-router-dom";
 // import {ProfileSidebar} from "../components/profile/Dropdown";
 import logo from "../../../assets/images/learnsphere-logo.png";
@@ -43,6 +44,7 @@ export default function Dashboard() {
         </div>
       </header>
       <main className="flex-1 container mx-auto py-6 px-4">
+        {/* Remove the static h1 that could be overlapping with your component */}
         <Outlet />
       </main>
     </div>
