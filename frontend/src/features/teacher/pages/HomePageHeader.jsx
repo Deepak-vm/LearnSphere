@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 // import {ProfileSidebar} from "../components/profile/Dropdown";
 import logo from "../../../assets/images/learnsphere-logo.png";
-import {TeacherHeader , NotificationDropdown, ProfileDropdown} from '../components/dashboard/MainNav';
+import { TeacherHeader, NotificationDropdown, ProfileDropdown } from '../components/dashboard/MainNav';
 import { ThemeToggle } from "../../../components/ui/ThemeToggle";
 
 
@@ -11,7 +11,7 @@ export default function Dashboard() {
     <div className="min-h-screen flex flex-col bg-background">
       <header className="border-b bg-card">
         <div className="container mx-auto flex h-16 items-center px-10">
-          <Link to="/student/dashboard" className="flex items-center space-x-2">
+          <Link to="/teacher/dashboard" className="flex items-center space-x-2">
             <img
               src={logo}
               alt="LearnSphere Logo"
@@ -24,7 +24,7 @@ export default function Dashboard() {
           <div className="hidden lg:flex ml-6">
             <TeacherHeader />
           </div>
-          
+
           <div className="ml-auto flex items-center space-x-4">
             <a
               href="https://lrc.jklu.edu.in"
@@ -36,7 +36,7 @@ export default function Dashboard() {
             </a>
             <NotificationDropdown />
             <ThemeToggle />
-            <ProfileDropdown/>
+            <ProfileDropdown />
             <div className="lg:hidden">
               <TeacherHeader />
             </div>
