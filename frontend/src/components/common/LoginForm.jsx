@@ -16,7 +16,7 @@ export default function LoginForm({ userType }) {
       { email: "nikhil@learnsphere.edu", password: "student123" }
     ],
     teacher: [
-      { email: "AmitSinhal@learnsphere.edu", password: "teacher123" },
+      { email: "amitsinhal@learnsphere.edu", password: "teacher123" },
     ],
     admin: [
       { email: "admin@learnsphere.edu", password: "admin123" }
@@ -26,16 +26,16 @@ export default function LoginForm({ userType }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    
-    // Find matching user in the appropriate array
+
     const foundUser = validCredentials[userType]?.find(
       user => user.email === email && user.password === password
     );
-    
+
     if (foundUser) {
-      switch(userType) {
+      switch (userType) {
         case "admin":
-          navigate("/admin/dashboard");
+          // Redirect to external URL (same tab)
+          window.location.href = "https://kzmg8c4p39jbpnov2hbn.lite.vusercontent.net/admin/dashboard";
           break;
         case "teacher":
           navigate("/teacher/dashboard");
