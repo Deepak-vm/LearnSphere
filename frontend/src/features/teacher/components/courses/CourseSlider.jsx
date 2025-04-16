@@ -187,7 +187,7 @@ export function CourseSlider() {
                         </DialogContent>
                       </Dialog>
                       <Button variant="default" className="w-full">
-                        <Link to={`courses/${course.id}`} className="flex w-full items-center justify-between">
+                        <Link to={`/teacher/dashboard/courses/${course.id}`} className="flex w-full items-center justify-between">
                           Open Course
                           <ChevronRight className="ml-2 h-4 w-4" />
                         </Link>
