@@ -85,6 +85,8 @@ export default function CoursePage({ params }) {
     },
   }
 
+  // Extract the current course using the courseId from params
+  const course = courseData[params?.courseId] || null
 
   // Mock announcements
   const [announcements, setAnnouncements] = useState([

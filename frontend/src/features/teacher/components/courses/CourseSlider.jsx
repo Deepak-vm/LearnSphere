@@ -187,11 +187,17 @@ export function CourseSlider() {
                         </DialogContent>
                       </Dialog>
                       <Button variant="default" className="w-full">
-                        <Link to={`/teacher/dashboard/courses/${course.id}`} className="flex w-full items-center justify-between">
+                        <a
+                          href="https://kzmg8c4p39jbpnov2hbn.lite.vusercontent.net/teacher/courses/CS301"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex w-full items-center justify-between"
+                        >
                           Open Course
                           <ChevronRight className="ml-2 h-4 w-4" />
-                        </Link>
+                        </a>
                       </Button>
+
                     </div>
                   </div>
                 </div>
