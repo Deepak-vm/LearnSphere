@@ -9,7 +9,7 @@ import {
   CalendarDays,
   Plane
 } from "lucide-react"
-import ProfilePic from "@/assets/images/ProfilePic.jpeg"
+import ProfilePic from "@/assets/images/teacherImage.jpg"
 
 const sidebarItems = [
   {
@@ -35,7 +35,7 @@ const sidebarItems = [
   {
     name: "Leave Records",
     href: "/profile/leave",
-    icon: Plane, // or FileMinus or BookOpenCheck
+    icon: Plane,
   },
   {
     name: "Additional Responsibilities",
@@ -49,13 +49,13 @@ const sidebarItems = [
   },
 ]
 
-
 export default function ProfileSidebar() {
   const location = useLocation()
   const pathname = location.pathname
 
   return (
     <div className="space-y-6">
+      {/* Teacher Profile Section */}
       <div className="flex flex-col items-center space-y-4">
         <div className="relative w-40 h-40">
           <img
@@ -64,7 +64,12 @@ export default function ProfileSidebar() {
             className="rounded-lg object-cover w-full h-full"
           />
         </div>
+        <div className="text-center">
+          <h2 className="text-lg font-semibold">Amit Sinhal</h2>
+        </div>
       </div>
+
+      {/* Navigation Section */}
       <nav className="flex flex-col space-y-1">
         {sidebarItems.map((item) => (
           <Button

@@ -1,6 +1,6 @@
 import { ProfileHeader } from "../components/profile/Header"
 import  ProfileSidebar  from "../components/profile/Sidebar"
-import { ProfileTabs } from "../components/profile/Tabs"
+// import { ProfileTabs } from "../components/profile/Tabs"
 
 export default function ProfilePage() {
   return (
@@ -11,7 +11,7 @@ export default function ProfilePage() {
         </div>
         <div className="flex-1 space-y-6">
           <ProfileHeader />
-          <ProfileTabs />
+          {/* <ProfileTabs /> */}
         </div>
       </div>
     </div>
